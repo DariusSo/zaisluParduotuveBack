@@ -48,7 +48,7 @@ public class StripeService {
         SessionCreateParams params = SessionCreateParams.builder()
                 .setMode(SessionCreateParams.Mode.PAYMENT)
                 .setSuccessUrl("http://localhost:8080/redirect?uuid=" + uuid)
-                .setCancelUrl("http://host.docker.internal:7777/index.html")
+                .setCancelUrl("http://localhost:7777/index.html")
                 .addLineItem(SessionCreateParams.LineItem.builder()
                         .setQuantity(1L)
                         .setPriceData(SessionCreateParams.LineItem.PriceData.builder()
