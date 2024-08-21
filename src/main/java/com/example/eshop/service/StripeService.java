@@ -15,8 +15,9 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-
+@Service
 public class StripeService {
+
 
     OrderService orderService = new OrderService();
 
