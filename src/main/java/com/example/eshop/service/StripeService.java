@@ -18,7 +18,6 @@ import java.util.UUID;
 
 public class StripeService {
 
-    @Autowired
     OrderService orderService = new OrderService();
 
     @Value("${stripe.api.key}")

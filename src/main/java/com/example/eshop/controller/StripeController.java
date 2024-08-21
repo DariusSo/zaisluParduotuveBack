@@ -17,9 +17,9 @@ import java.util.UUID;
 @RestController
 public class StripeController {
 
-    private StripeService stripeService;
+    private StripeService stripeService = new StripeService();
 
-    private OrderService orderService;
+    private OrderService orderService = new OrderService();
 
     @PostMapping("/create-checkout-session")
     public ResponseEntity<Map<String, String>> createCheckoutSession(@RequestBody Order order) {
