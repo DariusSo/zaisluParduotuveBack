@@ -14,21 +14,4 @@ public class eshopApplication {
 		SpringApplication.run(eshopApplication.class, args);
 	}
 
-	@Configuration
-	public class WebConfig implements WebMvcConfigurer {
-		@Bean
-		public WebMvcConfigurer corsConfigurer() {
-			return new WebMvcConfigurer() {
-				@Override
-				public void addCorsMappings(CorsRegistry registry) {
-					registry.addMapping("/**")
-							.allowedOrigins("http://127.0.0.1:8080","http://127.0.0.1:7777/") // Adjust this to your frontend origin
-							.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-							.allowedHeaders("*")
-							.allowCredentials(true);
-				}
-			};
-		}
-	}
-
 }
